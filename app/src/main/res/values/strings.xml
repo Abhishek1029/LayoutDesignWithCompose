@@ -23,4 +23,5 @@
     <string name="cd_fab_start">start</string>
     <string name="bottom_navigation_home">HOME</string>
     <string name="bottom_navigation_profile">PROFILE</string>
+    <string name="title_activity_drinking_water">DrinkingWaterActivity</string>
 </resources>
