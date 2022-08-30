@@ -10,6 +10,7 @@ import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
@@ -20,7 +21,7 @@ fun WellnessTaskItemStateful(
     taskName: String,
     modifier: Modifier = Modifier
 ) {
-    var checked by remember {
+    var checked by rememberSaveable {
         mutableStateOf(false)
     }
     WellnessTaskItem(

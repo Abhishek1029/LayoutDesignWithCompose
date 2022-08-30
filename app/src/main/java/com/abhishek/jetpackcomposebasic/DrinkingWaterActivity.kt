@@ -7,6 +7,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import com.abhishek.jetpackcomposebasic.ui.composables.StatefulCounter
+import com.abhishek.jetpackcomposebasic.ui.composables.WellnessScreen
 import com.abhishek.jetpackcomposebasic.ui.theme.JetpackComposeBasicTheme
 
 class DrinkingWaterActivity : ComponentActivity() {
@@ -14,7 +15,7 @@ class DrinkingWaterActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             JetpackComposeBasicTheme {
-               StatefulCounter()
+                WellnessScreen()
             }
         }
     }
