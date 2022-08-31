@@ -19,6 +19,7 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun WellnessTaskItemStateful(
     taskName: String,
+    onClose: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     var checked by rememberSaveable {
@@ -28,7 +29,8 @@ fun WellnessTaskItemStateful(
         taskName = taskName,
         checked = checked,
         onCheckedChange = { newVal -> checked = newVal },
-        onClose = { })
+        onClose = onClose
+    )
 }
 
 @Composable

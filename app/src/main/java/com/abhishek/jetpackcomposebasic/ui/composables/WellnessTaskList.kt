@@ -10,15 +10,12 @@ import com.abhishek.jetpackcomposebasic.data.datasource.WellnessTask
 @Composable
 fun WellnessTaskList(
     modifier: Modifier = Modifier,
-    taskList: List<WellnessTask> = remember {
-        getTaskList()
-    }
+    taskList: List<WellnessTask>,
+    onCloseClick: (WellnessTask) -> Unit
 ) {
     LazyColumn(modifier) {
         items(taskList) { item ->
-            WellnessTaskItemStateful(taskName = item.label)
+            WellnessTaskItemStateful(taskName = item.label, onClose = {onCloseClick(item)})
         }
     }
 }
-
-fun getTaskList() = List(30) { it -> WellnessTask(it, "Task $it") }
